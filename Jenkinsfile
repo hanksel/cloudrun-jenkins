@@ -21,7 +21,8 @@ stages {
 	
     stage('Dockercheck') {
         steps {
-				sh "docker version"
+		        build(image[, args])
+				
         }
     }
     
