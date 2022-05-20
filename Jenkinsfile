@@ -22,9 +22,8 @@ stages {
 	stage('Git checkout') {
             steps{
                 git (
-                        credentialsId: '<JENKINS_CREDENTIALS_ID>',
-                        url: '<GIT_URL>',
-                        branch : 'develop'
+                        url: 'https://github.com/hanksel/cloudrun-jenkins',
+                        branch : 'master'
                 )
             }
     }
