@@ -26,10 +26,9 @@ stages {
     }
 	  
 	
-    stage('Dockercheck') {
+    stage('cloud run deploy') {
         steps {
-		        sh "sudo apt-get update"
-				sh "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin"
+		        sh "gcloud run deploy cloudrun-jenkins --region us-east4 --platform managed --port 3000 --allow-unauthenticated"
         }
     }
     
