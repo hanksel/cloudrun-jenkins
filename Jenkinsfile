@@ -1,5 +1,9 @@
 echo 'Se inicio el pipeline'
 
+pwd()
+
+sh find /var -name gcloud
+
 pipeline {
    agent any
 
