@@ -10,6 +10,7 @@ pipeline {
 stages {
     stage('Run gcloud') {
         steps {
+		        sh "cat /etc/os-release"
 		        sh "pwd"
 				sh "ls"
 
@@ -21,7 +22,7 @@ stages {
 	
     stage('Dockercheck') {
         steps {
-		        build(image[, args])
+		        sh "sudo apt-get update"
 				
         }
     }
