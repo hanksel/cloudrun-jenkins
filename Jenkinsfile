@@ -22,7 +22,7 @@ stages {
 	
     stage('cloud run deploy') {
         steps {
-		        sh "gcloud run deploy cloudrun-jenkins --region us-east4 --platform managed --port 3000 --allow-unauthenticated"
+		        sh "gcloud run deploy cloudrun-jenkins --region us-east4 --platform managed --port 3000 --allow-unauthenticated --source ."
         }
     }
     
