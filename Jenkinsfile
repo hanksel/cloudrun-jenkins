@@ -20,7 +20,7 @@ stages {
 	stage('Git checkout') {
             steps{
 			    sh "git --version"
-				git 'https://github.com/hanksel/cloudrun-jenkins'
+				sh "git clone 'https://github.com/hanksel/cloudrun-jenkins'"
             }
     }
 		
