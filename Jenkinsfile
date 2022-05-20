@@ -10,8 +10,6 @@ pipeline {
 stages {
     stage('Run gcloud') {
         steps {
-				sh "pwd"
-
 				sh "ls /var"
 
                 sh "gcloud --version"
@@ -21,6 +19,7 @@ stages {
 	  
 	stage('Git checkout') {
             steps{
+			    sh "git --version"
 				git 'https://github.com/hanksel/cloudrun-jenkins'
             }
     }
