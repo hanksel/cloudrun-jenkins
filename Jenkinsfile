@@ -21,9 +21,14 @@ stages {
             steps{
 			    sh "git --version"
 				sh "git clone 'https://github.com/hanksel/cloudrun-jenkins'"
+				sh "ls"
             }
     }
-		
+    stage('Dockercheck') {
+        steps {
+				sh "Docker version"
+        }
+    }
     
 }
 }
