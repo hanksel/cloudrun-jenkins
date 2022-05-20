@@ -10,7 +10,8 @@ pipeline {
 stages {
     stage('Run gcloud') {
         steps {
-				sh "ls /var"
+		        sh "pwd"
+				sh "ls"
 
                 sh "gcloud --version"
 				sh "gcloud auth list"
@@ -19,6 +20,7 @@ stages {
 	  
 	stage('Git checkout') {
             steps{
+			    sh "rm -r cloudrun-jenkins"
 			    sh "git --version"
 				sh "git clone 'https://github.com/hanksel/cloudrun-jenkins'"
 				sh "ls"
