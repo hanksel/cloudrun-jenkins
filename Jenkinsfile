@@ -14,6 +14,7 @@ stages {
 				sh "ls /var"
 
                 sh "gcloud --version"
+				sh "gcloud auth list"
 
 
          }
