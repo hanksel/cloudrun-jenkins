@@ -21,10 +21,7 @@ stages {
 	  
 	stage('Git checkout') {
             steps{
-                git (
-                        url: 'https://github.com/hanksel/cloudrun-jenkins',
-                        branch : 'master'
-                )
+				git 'https://github.com/hanksel/cloudrun-jenkins'
             }
     }
 		
